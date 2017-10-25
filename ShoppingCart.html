@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>購物車頁</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-830951161"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-829789297"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-830951161');
+        gtag('config', 'AW-829789297');
+
+
+        function gtag_report_conversion_testA(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-830951161/DZIJCJq7zHcQ-Z2djAM',
+                'value': 665.0,
+                'currency': 'TWD',
+                'transaction_id': '',
+                'event_callback': callback
+            });
+
+            alert("已送出，Ａ帳號(830951161)加入購物車(點擊)");
+            window.location.href = "TestAFinish.html";
+
+            return false;
+        }
+
+        function gtag_report_conversion_testB(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-829789297/Y9KUCJS7zHcQ8ajWiwM',
+                'value': 332.0,
+                'currency': 'TWD',
+                'transaction_id': '',
+                'event_callback': callback
+            });
+
+            alert("已送出，Ｂ帳號(829789297)加入購物車(點擊)");
+            window.location.href = "TestBFinish.html";
+
+            return false;
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+</head>
+<body>
+Google Conversion Test<br/><br/>
+<input type="button" value="Ａ帳號(830951161)加入購物車(點擊)" onclick="gtag_report_conversion_testA()"/>
+<input type="button" value="Ｂ帳號(829789297)加入購物車(點擊)" onclick="gtag_report_conversion_testB()"/>
+<br/><br/>
+Test Version:10250359
+</body>
+</html>
